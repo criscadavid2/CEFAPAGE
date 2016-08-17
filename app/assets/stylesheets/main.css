@@ -510,15 +510,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-us .nav-tabs li a {
-	border-top:2px solid #f6f6f6;
-	color:#fc7700
+	border-top:2px solid #e6b800;
+	color:green
 }
 
 .about-us .nav-tabs li.active a, 
 .about-us .nav-tabs li.active a:hover, 
 .about-us .nav-tabs li.active a:focus {
 	border-radius: 0;
-	border-top: 2px solid #fc7700;
+	border-top: 2px solid green;
 	color: #333333;
 }
 
