@@ -1,0 +1,39 @@
+<%= form_for@post, :html => {:multipart => true} do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Titulo %><br>
+    <%= f.text_field :Titulo %>
+  </div>
+
+    <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+  <%=f.file_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Body %><br>
+    <%= f.text_area :Body %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_Publicación %><br>
+    <%= f.datetime_select :Fecha_Publicación %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
